@@ -35,5 +35,5 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)
-   cd YOUR_REPOSITORY_NAME
+   git clone [[[https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/natiked/Watch-O.git)](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)](https://github.com/natiked/Watch-O.git)
+   cd Watch-O
