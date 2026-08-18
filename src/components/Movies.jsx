@@ -1,14 +1,25 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 const bearer = import.meta.env.VITE_RAT;
 const baseImg = 'https://image.tmdb.org/t/p/original'
 
 const Movies = ({search, term}) => {
 
+    const navigate = useNavigate();
+
+
     const [mov, setMov] = useState(null);
     const [loading, setLoading] = useState(true);
     const [err, setErr] = useState(null);
     const [noMovie, setnoMovie] = useState(false);
+
+    const handleClick = (id) => {
+        var url = `/movie/${id}`;
+        console.log(url)
+        navigate(url);
+    }
 
     useEffect(() => {
         if(search) {
@@ -60,6 +71,7 @@ const Movies = ({search, term}) => {
             )
                 .then(result => {
                     setMov(result.results);
+                    console.log(result)
                     setLoading(false);
                 
                 })
@@ -81,8 +93,7 @@ const Movies = ({search, term}) => {
             <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] w-full gap-8 justify-items-center mt-5 px-10 mb-3">
                 
                 { mov && mov.map( (single) => (
-               <div className="group max-w-[300px] w-full h-[300px] border border-cyan-200 rounded-4xl flex justify-center items-center flex-col relative overflow-hidden hover:shadow-2xl cursor-pointer" id={single.id}>
-
+               <div onClick={() => {handleClick(String(single.id))}} className="group max-w-[300px] w-full h-[300px] border border-cyan-200 rounded-4xl flex justify-center items-center flex-col relative overflow-hidden hover:shadow-2xl cursor-pointer" id={single.id}>
                     <img src={(single.backdrop_path) ? baseImg + single.backdrop_path : 'placeholder.png'} alt={single.backdrop_path} className="w-full h-full object-cover" />
              
                     <div className="absolute inset-0 bg-cyan-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -100,4 +111,5 @@ const Movies = ({search, term}) => {
         </div>
     )
 } 
+
 export default Movies;
