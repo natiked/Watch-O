@@ -1,7 +1,7 @@
 # Watch-O
 Watch-O is a movie searching and discovering site made possible by TMDB.
 
-![Screenshot](./public/placeholder.png)
+![Screenshot](./public/ss.png)
 
 Live project link : [Watch-O](https://watch-o.vercel.app)
 
