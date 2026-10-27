@@ -1,39 +1,30 @@
-# 🎬 Movie Discovery App
+# Watch-O
+Watch-O is a movie searching and discovering site made possible by TMDB.
 
-A modern, responsive movie discovery web application built with **React**, **React Router**, and **Tailwind CSS**, powered by the **TMDB (The Movie Database) API**.
+![Screenshot](./public/placeholder.png)
 
-Browse trending popular titles, perform live movie searches, and view detailed information for individual films with smooth client-side navigation.
+Live project link : [Watch-O](https://watch-o.vercel.app)
 
----
 
-## ✨ Features
+## Features avaiable
+- Searching for movies
+- Discovering trending movies at the time of opening the site
+- Short, spoiler-free description on the movies you view
 
-- **🔥 Trending Movies:** Automatically fetches and displays popular titles upon launch.
-- **🔍 Real-Time Search:** Search movies dynamically through the TMDB database.
-- **📄 Dynamic Detail Pages:** Dedicated view for each movie with overview, release date, and original language via dynamic URL routes (`/movie/:id`).
-- **🎨 Modern Dark UI:** Built with Tailwind CSS, custom cyan glassmorphism accents, hover card micro-interactions, and skeleton loading states.
-- **⚡ Fast Client-Side Routing:** Managed seamlessly with React Router v6.
+# Running it locally 
+To run it locally the main thing you need is a TMDB API key. Since you can't really get mine after clonning this repo. You also need node.js v24 installed.
 
----
+Commands you should run:
 
-## 🛠️ Tech Stack
+git clone https://github.com/natiked/Watch-O
+cd Watch-O
+npm install
 
-- **Frontend:** React (Vite)
-- **Routing:** React Router v6 (`createBrowserRouter`, `useParams`, `useNavigate`)
-- **Styling:** Tailwind CSS
-- **API:** [The Movie Database (TMDB) API](https://www.themoviedb.org/documentation/api)
+Then you'll need to create a .env file inside the Watch-O folder and write this in that file:
+VITE_API_KEY='your api key'
 
----
+Then run the project using the below command :
+npm run dev
 
-## 🚀 Getting Started
 
-### Prerequisites
 
-Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
-
-### Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)
-   cd YOUR_REPOSITORY_NAME
